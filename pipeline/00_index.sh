@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+#SBATCH -p short
 module load samtools/1.11
 module load bwa/0.7.17
 if [ -f config.txt ]; then
@@ -6,26 +7,10 @@ if [ -f config.txt ]; then
 fi
 mkdir -p $GENOMEFOLDER
 pushd $GENOMEFOLDER
-# THIS IS EXAMPLE CODE FOR HOW TO DOWNLOAD DIRECT FROM FUNGIDB
-RELEASE=50
-SPECIES=ClusitaniaeATCC42720
-URL=https://fungidb.org/common/downloads/release-${RELEASE}/$SPECIES
-PREF=FungiDB-${RELEASE}_${SPECIES}
-FASTAFILE=${PREF}_Genome.fasta
-DOMAINFILE=${PREF}_InterproDomains.txt
-GFF=${PREF}.gff
+FASTAFILE=candida_lusitaniae_ATCC42720_w_CBS_6936_MT.fasta
+GFF=candida_lusitaniae_1.sorted.gff3
 ## THIS IS FUNGIDB DOWNLOAD PART
 echo "working off $FASTAFILE - check if these don't match may need to update config/init script"
-
-if [ ! -f $DOMAINFILE ]; then
-	curl -O $URL/txt/$DOMAINFILE
-fi
-if [ ! -f $FASTAFILE ] ; then
-	curl -O $URL/fasta/data/$FASTAFILE
-fi
-if [ ! -f $GFF ]; then
-	curl -O $URL/gff/data/$GFF
-fi
 
 if [[ ! -f $FASTAFILE.fai || $FASTAFILE -nt $FASTAFILE.fai ]]; then
 	samtools faidx $FASTAFILE
