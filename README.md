@@ -1,3 +1,12 @@
+# C. lusitaniae PopGenomics
+
+This was built from https://github.com/stajichlab/PopGenomics_template
+
+Some additional customization applied to reflect the multiple sub-sets of the dataset we are exploring.
+
+To do this several populations are defined in population_sets.yaml
+
+
 # PopGenomics template
 Template for Population Genomics variant calling in simple BASH + Slurm environment. Best use is to fork this as a template.
 
