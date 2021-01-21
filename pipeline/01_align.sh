@@ -43,23 +43,25 @@ if [ $N -gt $MAX ]; then
 fi
 
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read STRAIN FILEBASE
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read InternalStrainName STRAIN PAIR1 PAIR2 SeqProjectSrc Type Population 
 do
 
   # BEGIN THIS PART IS PROBABLY PROJECT SPECIFIC
   # THIS COULD NEED TO BE CHANGED TO R1 R2 or R1_001 and R2_001 etc
-  PAIR1=$FASTQFOLDER/${FILEBASE}_1.$FASTQEXT
-  PAIR2=$FASTQFOLDER/${FILEBASE}_2.$FASTQEXT
+  PAIR1=$FASTQFOLDER/$PAIR1
+  PAIR2=$FASTQFOLDER/$PAIR2
   PREFIX=$STRAIN
   # END THIS PART IS PROBABLY PROJECT SPECIFIC
   echo "STRAIN is $STRAIN $PAIR1 $PAIR2"
-
+  if [ ! -f $PAIR1 ]; then
+	  echo "No Fastq file in $PAIR1"
+  fi
   TMPBAMFILE=$TEMP/$STRAIN.unsrt.bam
   SRTED=$TMPOUTDIR/$STRAIN.srt.bam
   DDFILE=$TMPOUTDIR/$STRAIN.DD.bam
   FINALFILE=$ALNFOLDER/$STRAIN.$HTCEXT
 
-  READGROUP="@RG\tID:$STRAIN\tSM:$STRAIN\tLB:$PREFIX\tPL:illumina\tCN:$RGCENTER"
+  READGROUP="@RG\tID:$STRAIN\tSM:$STRAIN\tLB:$PREFIX\tPL:illumina\tCN:$SeqProjectSrc"
 
   if [ ! -s $FINALFILE ]; then
     if [ ! -s $DDFILE ]; then
