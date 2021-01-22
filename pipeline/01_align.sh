@@ -101,7 +101,7 @@ do
   UMAP=$UNMAPPED/${STRAIN}.$FQ
   UMAPSINGLE=$UNMAPPED/${STRAIN}_single.$FQ
   #echo "$UMAP $UMAPSINGLE $FQ"
-
+  mkdir -p $UNMAPPED
   if [ ! -f $UMAP ]; then
     module load BBMap
     samtools fastq -f 4 --threads $CPU -N -s $UMAPSINGLE -o $UMAP $FINALFILE
