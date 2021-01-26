@@ -1,0 +1,151 @@
+IQ-TREE 2.1.1 COVID-edition built Aug 22 2020
+
+Input file name: strain_tree/Clus_v1.PopC.SNP.mfa
+Type of analysis: tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 336181
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 13 sequences with 665 nucleotide sites
+Number of constant sites: 0 (= 0% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 0 (= 0% of all sites)
+Number of parsimony informative sites: 454
+Number of distinct site patterns: 541
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+ASC
+
+Rate parameter R:
+
+  A-C: 1.2040
+  A-G: 2.5049
+  A-T: 1.3040
+  C-G: 0.5333
+  C-T: 2.3498
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2438
+  pi(C) = 0.2492
+  pi(G) = 0.2391
+  pi(T) = 0.2679
+
+Rate matrix Q:
+
+  A     -1.12    0.2693    0.5375    0.3136
+  C    0.2635    -0.943    0.1144    0.5651
+  G    0.5482    0.1193   -0.9079    0.2405
+  T    0.2854    0.5257    0.2146    -1.026
+
+Model of rate heterogeneity: Uniform
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -5754.8754 (s.e. 101.5353)
+Unconstrained log-likelihood (without tree): -4098.5720
+Number of free parameters (#branches + #model parameters): 31
+Akaike information criterion (AIC) score: 11571.7507
+Corrected Akaike information criterion (AICc) score: 11574.8850
+Bayesian information criterion (BIC) score: 11711.2441
+
+Total tree length (sum of branch lengths): 1.9576
+Sum of internal branch lengths: 0.6424 (32.8135% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'C_U04' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++---------C_U04
+|
+|           +------C_U02
++-----------| (100)
+|           |                              +---------C_L01.rep1
+|           |                     +--------| (100)
+|           |                     |        +----------C_L01
+|           |                +----| (100)
+|           |                |    |     +--------C_M01
+|           |                |    +-----| (100)
+|           |                |          |   +---------C_L02
+|           |                |          +---| (86)
+|           |                |              +------------C_M03
+|           +----------------| (100)
+|                            |         +---------C_M04
+|                            |      +--| (46)
+|                            |      |  +--------------C_L03
+|                            |  +---| (95)
+|                            |  |   +----------------C_L04
+|                            +--| (100)
+|                               +------------C_M02
+|
+|    +--------C_U01
++----| (82)
+     +--------C_U03
+
+Tree in newick format:
+
+(C_U04:0.0894588828,(C_U02:0.0680881985,(((C_L01.rep1:0.0890429318,C_L01:0.0995876178)100:0.0860280933,(C_M01:0.0862742293,(C_L02:0.0895676024,C_M03:0.1174039332)86:0.0397541555)100:0.0576217924)100:0.0479094971,(((C_M04:0.0961099138,C_L03:0.1386233966)46:0.0350033153,C_L04:0.1511218955)95:0.0396399959,C_M02:0.1223292531)100:0.0265857764)100:0.1519327942)100:0.1112065124,(C_U01:0.0859699437,C_U03:0.0816760505)82:0.0466810551);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -5756.177108
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++---------C_U04
+|
+|           +------C_U02
++-----------| (100)
+|           |                              +--------C_L01.rep1
+|           |                     +--------| (100)
+|           |                     |        +----------C_L01
+|           |                +----| (100)
+|           |                |    |     +---------C_M01
+|           |                |    +-----| (100)
+|           |                |          |   +---------C_L02
+|           |                |          +---| (86)
+|           |                |              +------------C_M03
+|           +----------------| (100)
+|                            |      +-----------C_M04
+|                            |  +---| (95)
+|                            |  |   |   +--------------C_L03
+|                            |  |   +---| (53)
+|                            |  |       +---------------C_L04
+|                            +--| (100)
+|                               +-------------C_M02
+|
+|    +--------C_U01
++----| (82)
+     +--------C_U03
+
+
+Consensus tree in newick format: 
+
+(C_U04:0.0900501686,(C_U02:0.0662351006,(((C_L01.rep1:0.0868943750,C_L01:0.1015659061)100:0.0849113392,(C_M01:0.0896829234,(C_L02:0.0885279995,C_M03:0.1184162204)86:0.0374776787)100:0.0569335955)100:0.0475734851,((C_M04:0.1045568426,(C_L03:0.1342382968,C_L04:0.1414501346)53:0.0359790517)95:0.0425899450,C_M02:0.1278217967)100:0.0275611063)100:0.1487213378)100:0.1128817127,(C_U01:0.0859769350,C_U03:0.0815464086)82:0.0462642281);
+
+TIME STAMP
+----------
+
+Date and time: Tue Jan 26 02:55:57 2021
+Total CPU time used: 1.88594 seconds (0h:0m:1s)
+Total wall-clock time used: 1.754053116 seconds (0h:0m:1s)
+
