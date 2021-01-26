@@ -22,7 +22,7 @@ if [ -z $SLICEVCF ]; then
 	echo "Need to define SLICEVCF in config.txt"
 	exit
 fi
-if [[] ! -z $POPYAML || ! -s $POPYAML ]; then
+if [[ -z $POPYAML || ! -s $POPYAML ]]; then
 	echo "Cannot find \$POPYAML variable - set in config.txt"
 	exit
 fi

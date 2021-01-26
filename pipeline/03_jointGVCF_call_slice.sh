@@ -177,8 +177,8 @@ do
 	    bgzip $SELECTINDEL
 	    tabix $SELECTINDEL.gz
 	fi
-
-	if [ -d $TEMPDIR ]; then
-		rmdir $TEMPDIR
-	fi
 done
+
+if [ -d $TEMPDIR ]; then
+	rmdir $TEMPDIR
+fi
