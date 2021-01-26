@@ -1,5 +1,82 @@
-Pop_A:
+Populations:
 
+  DiverseEnv:
+    - ATCC_42720
+    - CBS_6936
+    - CL_AR_0398
+    - UCDFST_16-4994.55
+    - UCDFST_61-4
+    - UCDFST_71-129
+    - UCDFST_76-31
+    - UCDFST_79-1
+    - UCDFST_80-11
+    - UCDFST_80-12
+    - UCDFST_82-606.2
+    - CL_1A
+    - A_L17
+    - C_L01
+    - B_L10D
+    - FDAARGOS_655
 
-Pop_B
+  PopA:
+    - A_U02
+    - A_U03
+    - A_U04
+    - A_U05
+    - A_U06
+    - A_U07
+    - A_U08
+    - A_L09
+    - A_L10
+    - A_L11
+    - A_L12
+    - A_L13
+    - A_L14
+    - A_L15
+    - A_L16
+    - A_L17
+    - A_L18
+    - A_L19
+    - A_S20
+    - A_S21
+    - A_Sp2_12C
+    - A_Sp2_1B
+    - A_Sp2_1G
+    - A_Sp2_8D
+    - A_L17.rep1
+    - A_L17.rep2
 
+  PopB:
+    - 13_BAL_3B
+    - 13_BAL_5F
+    - 13_BAL_6C
+    - 13_BAL_6E
+    - 13_sp2017_3D
+    - 13_sp2017_6G
+    - B_L10D
+    - B_L11G
+    - B_L12G
+    - B_L10A
+    - B_L11A
+    - B_L12A
+    - B_U4E
+    - B_U3H
+    - B_U3F
+    - B_U5C
+    - B_U1A
+    - B_U6A
+
+  PopC:
+    - C_U01
+    - C_U02
+    - C_U03
+    - C_U04
+    - C_L01
+    - C_L02
+    - C_L03
+    - C_L04
+    - C_M01
+    - C_M02
+    - C_M03
+    - C_M04
+    - C_L01.rep1
