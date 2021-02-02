@@ -89,3 +89,9 @@ Phaff_80_11,UCDFST_80-11,Novogene_July2018/DH3119_PfaffID80_11_1.fq.gz,Novogene_
 Phaff_80_12,UCDFST_80-12,Novogene_July2018/DH3120_PfaffID80_12_1.fq.gz,Novogene_July2018/DH3120_PfaffID80_12_2.fq.gz,Novogene,Monoisolate,Env
 Phaff_82_606_2,UCDFST_82-606.2,Novogene_July2018/DH3121_PfaffID82_606_2_1.fq.gz,Novogene_July2018/DH3121_PfaffID82_606_2_2.fq.gz,Novogene,Monoisolate,Env
 U10Dmrr1,A_U05_mrr1,Novogene_July2018/U10Dmrr1_1.fq.gz,Novogene_July2018/U10Dmrr1_2.fq.gz,Novogene,Monoisolate,UUMRR
+P1,DSG_P1,Assembled/P1/P1_R1.fq.gz,Assembled/P1/P1_R2.fq.gz,PublicAsmShredded,Monoisolate,Clinical
+P2,DSG_P2,Assembled/P2/P2_R1.fq.gz,Assembled/P2/P2_R2.fq.gz,PublicAsmShredded,Monoisolate,Clinical
+P3,DSG_P3,Assembled/P3/P3_R1.fq.gz,Assembled/P3/P3_R2.fq.gz,PublicAsmShredded,Monoisolate,Clinical
+P4,DSG_P4,Assembled/P4/P4_R1.fq.gz,Assembled/P4/P4_R2.fq.gz,PublicAsmShredded,Monoisolate,Clinical
+P5,DSG_P5,Assembled/P5/P5_R1.fq.gz,Assembled/P5/P5_R2.fq.gz,PublicAsmShredded,Monoisolate,Clinical
+N2_070_000G1,N2_070_000G1,Assembled/N2_070_000G1/N2_070_000G1_R1.fq.gz,Assembled/N2_070_000G1/N2_070_000G1_R2.fq.gz,PublicAsmShredded,Monoisolate_MAG,Clinical
