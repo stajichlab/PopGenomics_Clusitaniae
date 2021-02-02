@@ -17,8 +17,9 @@ declare -x TEMPDIR=$TEMP/$USER/$$
 
 cleanup() {
 	#echo "rm temp is: $TEMPDIR"
-	rm -rf $TEMPDIR
-	rmdir $TEMPDIR
+	if [ -d $TEMPDIR ];
+		rm -rf $TEMPDIR
+	fi
 }
 
 # Set trap to ensure cleanupis stopped
@@ -83,7 +84,7 @@ do
 	FILTERINDEL=$STEM.INDEL.filter.vcf
 	SELECTSNP=$STEM.SNP.selected.vcf
 	SELECTINDEL=$STEM.INDEL.selected.vcf
-
+	echo "$STEM is stem; GENOVCFOUT=$STEM.all.vcf POPNAME=$POPNAME slice=$SLICEVCF"
 	mkdir -p $TEMPDIR
 	if [ ! -f $GENOVCFOUT.gz ]; then
 	    if [ ! -f $GENOVCFOUT ]; then
@@ -169,7 +170,7 @@ do
 	    tabix $FILTERINDEL.gz
 	fi
 
-	if [[ ! -f $SELECTINDEL.gz || $FILTERINDEL.gz -nt $SELETINDEL.gz ]]; then
+	if [[ ! -f $SELECTINDEL.gz || $FILTERINDEL.gz -nt $SELECTINDEL.gz ]]; then
 	    gatk SelectVariants -R $REFGENOME \
 		--variant $FILTERINDEL.gz \
 		--output $SELECTINDEL \
