@@ -2,7 +2,7 @@ IQ-TREE 2.1.1 COVID-edition built Aug 22 2020
 
 Input file name: strain_tree/Clus_v1.PopB.SNP.mfa
 Type of analysis: tree reconstruction + non-parametric bootstrap (100 replicates)
-Random seed number: 333992
+Random seed number: 516827
 
 REFERENCES
 ----------
@@ -18,11 +18,11 @@ https://doi.org/10.1093/molbev/msaa015
 SEQUENCE ALIGNMENT
 ------------------
 
-Input data: 18 sequences with 963 nucleotide sites
+Input data: 18 sequences with 1103 nucleotide sites
 Number of constant sites: 0 (= 0% of all sites)
 Number of invariant (constant or ambiguous constant) sites: 0 (= 0% of all sites)
-Number of parsimony informative sites: 500
-Number of distinct site patterns: 797
+Number of parsimony informative sites: 536
+Number of distinct site patterns: 886
 
 SUBSTITUTION PROCESS
 --------------------
@@ -31,141 +31,141 @@ Model of substitution: GTR+F+ASC
 
 Rate parameter R:
 
-  A-C: 1.0146
-  A-G: 2.2984
-  A-T: 1.0236
-  C-G: 0.7373
-  C-T: 2.5430
+  A-C: 1.1145
+  A-G: 2.5261
+  A-T: 1.0669
+  C-G: 0.7325
+  C-T: 2.5417
   G-T: 1.0000
 
 State frequencies: (empirical counts from alignment)
 
-  pi(A) = 0.2626
-  pi(C) = 0.2409
-  pi(G) = 0.2203
-  pi(T) = 0.2761
+  pi(A) = 0.2608
+  pi(C) = 0.2423
+  pi(G) = 0.2184
+  pi(T) = 0.2785
 
 Rate matrix Q:
 
-  A   -0.9559    0.2261    0.4683    0.2614
-  C    0.2465    -1.046    0.1502    0.6495
-  G    0.5583    0.1643    -0.978    0.2554
-  T    0.2486    0.5667    0.2038    -1.019
+  A   -0.9939    0.2399      0.49    0.2639
+  C    0.2581    -1.029    0.1421    0.6288
+  G    0.5851    0.1577   -0.9901    0.2474
+  T    0.2471    0.5471     0.194   -0.9882
 
 Model of rate heterogeneity: Uniform
 
 MAXIMUM LIKELIHOOD TREE
 -----------------------
 
-Log-likelihood of the tree: -9046.4779 (s.e. 164.6830)
-Unconstrained log-likelihood (without tree): -6282.4053
+Log-likelihood of the tree: -9765.9383 (s.e. 169.7786)
+Unconstrained log-likelihood (without tree): -7286.0941
 Number of free parameters (#branches + #model parameters): 41
-Akaike information criterion (AIC) score: 18174.9557
-Corrected Akaike information criterion (AICc) score: 18178.6951
-Bayesian information criterion (BIC) score: 18374.6279
+Akaike information criterion (AIC) score: 19613.8767
+Corrected Akaike information criterion (AICc) score: 19617.1227
+Bayesian information criterion (BIC) score: 19819.1140
 
-Total tree length (sum of branch lengths): 2.4377
-Sum of internal branch lengths: 0.5120 (21.0022% of tree length)
+Total tree length (sum of branch lengths): 2.1986
+Sum of internal branch lengths: 0.4116 (18.7193% of tree length)
 
-NOTE: Tree is UNROOTED although outgroup taxon 'B_L11A' is drawn at root
+NOTE: Tree is UNROOTED although outgroup taxon 'B_L02' is drawn at root
 Numbers in parentheses are  standard bootstrap support (%)
 
-+------B_L11A
++-------B_L02
 |
-|                                    +---------------------13_BAL_6C
-|                              +-----| (71)
-|                              |     +----------13_BAL_6E
-|                       +------| (56)
-|                       |      +----------13_sp2017_6G
-|              +--------| (93)
-|              |        +---------------13_BAL_5F
-|     +--------| (74)
-|     |        +----------B_U1A
-|  +--| (16)
-|  |  |           +-------B_U4E
-|  |  |        +--| (44)
-|  |  |        |  +------------B_L10D
-|  |  |     +--| (9)
-|  |  |     |  |  +------B_U3H
-|  |  |     |  +--| (30)
-|  |  |     |     +---------B_L11G
-|  |  |  +--| (12)
-|  |  |  |  |  +--------------B_L12G
-|  |  |  |  +--| (8)
-|  |  |  |     +----B_U3F
-|  |  +--| (4)
-|  |     +-------------B_U6A
-+--| (23)
-|  |  +----------B_L10A
-|  +--| (27)
-|     +--------------------------B_U5C
+|        +----------B_L01
+|     +--| (22)
+|     |  +-----B_U07
+|  +--| (18)
+|  |  |        +---------B_L03
+|  |  |     +--| (28)
+|  |  |     |  |                +----B_M16
+|  |  |     |  |            +---| (47)
+|  |  |     |  |            |   +----------------------------B_S18
+|  |  |     |  |    +-------| (89)
+|  |  |     |  |    |       |     +-------------B_M15
+|  |  |     |  |    |       +-----| (52)
+|  |  |     |  |    |             +---------------------------B_U14
+|  |  |     |  +----| (71)
+|  |  |     |       +--------B_U11
+|  |  |  +--| (25)
+|  |  |  |  +-----B_U08
+|  |  +--| (13)
+|  |     +----B_U09
++--| (17)
+|  |  +----------B_L04
+|  +--| (14)
+|     |  +----B_L05
+|     +--| (23)
+|        |       +---------B_S17
+|        |  +----| (85)
+|        |  |    +------------------B_U13
+|        +--| (84)
+|           +------B_L06
 |
-|          +--------------------------13_BAL_3B
-|  +-------| (88)
-|  |       +--------13_sp2017_3D
-+--| (48)
-   +-----------B_L12A
+|  +------------------B_U10
++--| (38)
+   +--------B_U12
 
 Tree in newick format:
 
-(B_L11A:0.0629674212,((((((13_BAL_6C:0.1782262620,13_BAL_6E:0.0877477330)71:0.0533065221,13_sp2017_6G:0.0869526553)56:0.0600623466,13_BAL_5F:0.1266893091)93:0.0719925331,B_U1A:0.0888346885)74:0.0742265540,((((B_U4E:0.0655987467,B_L10D:0.1052901484)44:0.0252893219,(B_U3H:0.0619156205,B_L11G:0.0788734313)30:0.0221158259)9:0.0159195173,(B_L12G:0.1247577099,B_U3F:0.0453988860)8:0.0220442972)12:0.0205503273,B_U6A:0.1144328253)4:0.0048569117)16:0.0159455683,(B_L10A:0.0912072567,B_U5C:0.2175392363)27:0.0216785998)23:0.0188287755,((13_BAL_3B:0.2132711237,13_sp2017_3D:0.0772990548)88:0.0646834344,B_L12A:0.0987560003)48:0.0204780173);
+(B_L02:0.0682988316,(((B_L01:0.0932241458,B_U07:0.0525478637)22:0.0136445149,(((B_L03:0.0884180623,(((B_M16:0.0428464313,B_S18:0.2372975905)47:0.0355478508,(B_M15:0.1151531955,B_U14:0.2293584513)52:0.0501859929)89:0.0720809191,B_U11:0.0752392917)71:0.0440074195)28:0.0124725402,B_U08:0.0544797565)25:0.0155878737,B_U09:0.0451406403)13:0.0159208148)18:0.0298308733,(B_L04:0.0898834603,(B_L05:0.0489172348,((B_S17:0.0840809616,B_U13:0.1557021140)85:0.0439850790,B_L06:0.0630727756)84:0.0304578824)23:0.0125502336)14:0.0035404179)17:0.0208131051,(B_U10:0.1622652614,B_U12:0.0811501027)38:0.0109463556);
 
 CONSENSUS TREE
 --------------
 
 Consensus tree is constructed from 100 bootstrap trees
-Log-likelihood of consensus tree: -9056.139122
-Robinson-Foulds distance between ML tree and consensus tree: 10
+Log-likelihood of consensus tree: -9765.938340
+Robinson-Foulds distance between ML tree and consensus tree: 0
 
 Branches with support >0.000000% are kept (extended consensus)
 Branch lengths are optimized by maximum likelihood on original alignment
 Numbers in parentheses are bootstrap supports (%)
 
-+------B_L11A
++-------B_L02
 |
-|                                     +---------------------13_BAL_6C
-|                               +-----| (71)
-|                               |     +---------13_BAL_6E
-|                          +----| (56)
-|                          |    +----------13_sp2017_6G
-|                  +-------| (93)
-|                  |       +----------------13_BAL_5F
-|           +------| (74)
-|           |      +----------B_U1A
-|        +--| (26)
-|        |  +-------------B_L12G
+|        +----------B_L01
 |     +--| (22)
-|     |  |        +------B_U4E
-|     |  |     +--| (44)
-|     |  |     |  +------------B_L10D
-|     |  |  +--| (9)
-|     |  |  |  |  +------B_U3H
-|     |  |  |  +--| (30)
-|     |  |  |     +--------B_L11G
-|     |  +--| (10)
-|     |     +-----B_U3F
-|  +--| (10)
-|  |  |  +------------------------B_U5C
-|  |  +--| (37)
-|  |     +-----------B_U6A
-+--| (23)
-|  +------------B_L10A
+|     |  +-----B_U07
+|  +--| (18)
+|  |  |        +---------B_L03
+|  |  |     +--| (28)
+|  |  |     |  |                +----B_M16
+|  |  |     |  |            +---| (47)
+|  |  |     |  |            |   +----------------------------B_S18
+|  |  |     |  |    +-------| (89)
+|  |  |     |  |    |       |     +-------------B_M15
+|  |  |     |  |    |       +-----| (52)
+|  |  |     |  |    |             +---------------------------B_U14
+|  |  |     |  +----| (71)
+|  |  |     |       +--------B_U11
+|  |  |  +--| (25)
+|  |  |  |  +-----B_U08
+|  |  +--| (13)
+|  |     +----B_U09
++--| (17)
+|  |  +----------B_L04
+|  +--| (14)
+|     |  +----B_L05
+|     +--| (23)
+|        |       +---------B_S17
+|        |  +----| (85)
+|        |  |    +------------------B_U13
+|        +--| (84)
+|           +------B_L06
 |
-|          +-------------------------13_BAL_3B
-|  +-------| (88)
-|  |       +--------13_sp2017_3D
-+--| (48)
-   +-----------B_L12A
+|  +------------------B_U10
++--| (38)
+   +--------B_U12
 
 
 Consensus tree in newick format: 
 
-(B_L11A:0.0642246922,((((((((13_BAL_6C:0.1794502554,13_BAL_6E:0.0871484522)71:0.0527951205,13_sp2017_6G:0.0889982798)56:0.0454882973,13_BAL_5F:0.1424556712)93:0.0705871878,B_U1A:0.0954756828)74:0.0573164028,B_L12G:0.1163427456)26:0.0283262335,(((B_U4E:0.0638258541,B_L10D:0.1058309439)44:0.0287521389,(B_U3H:0.0636828611,B_L11G:0.0764392026)30:0.0217335791)9:0.0160113749,B_U3F:0.0550325843)10:0.0158909881)22:0.0236844034,(B_U5C:0.2088241707,B_U6A:0.0974086528)37:0.0271021612)10:0.0088172464,B_L10A:0.1095071005)23:0.0175272236,((13_BAL_3B:0.2128901812,13_sp2017_3D:0.0783634295)88:0.0648661158,B_L12A:0.0978596027)48:0.0200989727);
+(B_L02:0.0683003591,(((B_L01:0.0932265235,B_U07:0.0525492737)22:0.0136435605,(((B_L03:0.0884220335,(((B_M16:0.0428304938,B_S18:0.2373103218)47:0.0355586678,(B_M15:0.1151631471,B_U14:0.2293732491)52:0.0501778961)89:0.0720787739,B_U11:0.0752390099)71:0.0440092114)28:0.0124715388,B_U08:0.0544785362)25:0.0155891027,B_U09:0.0451435235)13:0.0159198397)18:0.0298310408,(B_L04:0.0898845648,(B_L05:0.0489182004,((B_S17:0.0840809366,B_U13:0.1557040597)85:0.0439819880,B_L06:0.0630741062)84:0.0304566484)23:0.0125487777)14:0.0035413491)17:0.0208126891,(B_U10:0.1622686430,B_U12:0.0811517770)38:0.0109455342);
 
 TIME STAMP
 ----------
 
-Date and time: Tue Jan 26 02:56:44 2021
-Total CPU time used: 3.208611 seconds (0h:0m:3s)
-Total wall-clock time used: 1.565679073 seconds (0h:0m:1s)
+Date and time: Tue Feb  2 13:42:34 2021
+Total CPU time used: 4.652869 seconds (0h:0m:4s)
+Total wall-clock time used: 2.342830896 seconds (0h:0m:2s)
 
