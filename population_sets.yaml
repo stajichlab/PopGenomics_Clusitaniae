@@ -3,7 +3,7 @@ Populations:
   DiverseEnv:
     - ATCC_42720
     - CBS_6936
-    - CL_AR_0398
+    - AR_0398
     - UCDFST_16-4994.55
     - UCDFST_61-4
     - UCDFST_71-129
@@ -15,7 +15,7 @@ Populations:
     - CL_1A
     - A_L17
     - C_L01
-    - B_L10D
+    - B_L01
     - FDAARGOS_655
 
   PopA:
@@ -47,36 +47,71 @@ Populations:
     - A_L17.rep2
 
   PopB:
-    - 13_BAL_3B
-    - 13_BAL_5F
-    - 13_BAL_6C
-    - 13_BAL_6E
-    - 13_sp2017_3D
-    - 13_sp2017_6G
-    - B_L10D
-    - B_L11G
-    - B_L12G
-    - B_L10A
-    - B_L11A
-    - B_L12A
-    - B_U4E
-    - B_U3H
-    - B_U3F
-    - B_U5C
-    - B_U1A
-    - B_U6A
+    - B_U13
+    - B_U14
+    - B_M15
+    - B_M16
+    - B_S17
+    - B_S18
+    - B_L01
+    - B_L02
+    - B_L03
+    - B_L04
+    - B_L05
+    - B_L06
+    - B_U07
+    - B_U08
+    - B_U09
+    - B_U10
+    - B_U11
+    - B_U12
+
+  PoolA:
+    - A_Pool_UL
+    - A_Pool_LL
+    - A_Pool_Sp
+
+  PoolB:
+    - B_Pool_UL
+    - B_Pool_ML
+    - B_Pool_LL
+    - B_Pool_Plate
 
   PopC:
-    - C_U01
-    - C_U02
-    - C_U03
-    - C_U04
     - C_L01
+    - C_L01.rep1
     - C_L02
     - C_L03
     - C_L04
-    - C_M01
-    - C_M02
-    - C_M03
-    - C_M04
-    - C_L01.rep1
+    - C_M05
+    - C_M06
+    - C_M07
+    - C_M08
+    - C_U09
+    - C_U10
+    - C_U11
+    - C_U12
+
+  Cross2383_L17:
+    - 2383xL17_10
+    - 2383xL17_14
+    - 2383xL17_17
+    - 2383xL17_7
+    - DH_2383
+    - A_L17
+    - A_L17_MATa
+    - A_L17.rep1
+    - A_L17.rep2
+
+  A_Evol:
+    - A_U05_anc_evol1
+    - A_U05_anc_evol2
+    - A_U05_anc_evol3
+    - A_U05_anc_evol4
+    - A_U05
+    - A_U05_mrr1
+
+  B_Evol:
+    - B_M15_evol1
+    - B_M15_evol2
+    - B_M15
