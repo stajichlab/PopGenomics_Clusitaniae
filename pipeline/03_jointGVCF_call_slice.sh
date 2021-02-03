@@ -17,9 +17,7 @@ declare -x TEMPDIR=$TEMP/$USER/$$
 
 cleanup() {
 	#echo "rm temp is: $TEMPDIR"
-	if [ -d $TEMPDIR ];
-		rm -rf $TEMPDIR
-	fi
+	rm -rf $TEMPDIR
 }
 
 # Set trap to ensure cleanupis stopped
