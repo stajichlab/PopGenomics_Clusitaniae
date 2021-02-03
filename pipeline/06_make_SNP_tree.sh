@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH --mem=24gb --ntasks 16 --nodes 1
+#SBATCH --mem=24gb --ntasks 24 --nodes 1
 #SBATCH --time=2:00:00 -p short
 #SBATCH -J maketree --out logs/make_tree.log
 
@@ -56,9 +56,8 @@ do
       #printf ">%s\n%s\n" $REFNAME $(bcftools view -e 'AF=1' ${vcf} | bcftools query -e 'INFO/AF < 0.1' -f '%REF') > $FAS
       parallel -j $CPU print_fas ::: $(bcftools query -l ${vcf}) ::: $vcf >> $FAS
       perl -ip -e 'if(/^>/){s/[\(\)#]/_/g; s/_+/_/g } else {s/[\*.]/-/g }' $FAS
-      FastTreeMP -gtr -gamma -nt < $FAS > $TREEDIR/$PREFIX.$POPNAME.$TYPE.fasttree.tre
     fi
   done
 done
-
+parallel -j 2 FastTreeMP -gtr -gamma -nt {} \> {.}.fasttree.tre ::: $(ls $TREEDIR/*.mfa)
 parallel -j 4 iqtree2 -m GTR+ASC -s {} -nt AUTO -b 100 ::: $(ls $TREEDIR/*.mfa)
