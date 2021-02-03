@@ -1,0 +1,123 @@
+IQ-TREE 2.1.1 COVID-edition built Aug 22 2020
+
+Input file name: strain_tree/Clus_v1.A_Evol.SNP.mfa
+Type of analysis: tree reconstruction + non-parametric bootstrap (100 replicates)
+Random seed number: 650559
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 6 sequences with 692 nucleotide sites
+Number of constant sites: 0 (= 0% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 0 (= 0% of all sites)
+Number of parsimony informative sites: 234
+Number of distinct site patterns: 371
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+ASC
+
+Rate parameter R:
+
+  A-C: 0.7422
+  A-G: 2.3648
+  A-T: 1.1649
+  C-G: 0.8155
+  C-T: 2.6365
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2616
+  pi(C) = 0.2477
+  pi(G) = 0.2283
+  pi(T) = 0.2624
+
+Rate matrix Q:
+
+  A   -0.9415    0.1682    0.4937    0.2796
+  C    0.1776   -0.9806    0.1703    0.6327
+  G    0.5658    0.1848   -0.9906      0.24
+  T    0.2787    0.5974    0.2088    -1.085
+
+Model of rate heterogeneity: Uniform
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -3610.0260 (s.e. 43.8217)
+Unconstrained log-likelihood (without tree): -3800.6737
+Number of free parameters (#branches + #model parameters): 17
+Akaike information criterion (AIC) score: 7254.0520
+Corrected Akaike information criterion (AICc) score: 7254.9600
+Bayesian information criterion (BIC) score: 7331.2250
+
+Total tree length (sum of branch lengths): 0.8394
+Sum of internal branch lengths: 0.1222 (14.5574% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'A_U05_anc_evol1' is drawn at root
+Numbers in parentheses are  standard bootstrap support (%)
+
++----------A_U05_anc_evol1
+|
+|       +-----------------A_U05
++-------| (100)
+|       |      +--------A_U05_mrr1
+|       +------| (100)
+|              +------------------------------------------A_U05_anc_evol2
+|
+|  +------------------------A_U05_anc_evol4
++--| (70)
+   +-------A_U05_anc_evol3
+
+Tree in newick format:
+
+(A_U05_anc_evol1:0.0697021402,(A_U05:0.1120719688,(A_U05_mrr1:0.0562337724,A_U05_anc_evol2:0.2681163036)100:0.0457769024)100:0.0523651202,(A_U05_anc_evol4:0.1573531546,A_U05_anc_evol3:0.0537459525)70:0.0240562830);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 100 bootstrap trees
+Log-likelihood of consensus tree: -3610.026187
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++----------A_U05_anc_evol1
+|
+|       +-----------------A_U05
++-------| (100)
+|       |      +--------A_U05_mrr1
+|       +------| (100)
+|              +------------------------------------------A_U05_anc_evol2
+|
+|  +------------------------A_U05_anc_evol4
++--| (70)
+   +-------A_U05_anc_evol3
+
+
+Consensus tree in newick format: 
+
+(A_U05_anc_evol1:0.0698021865,(A_U05:0.1122598002,(A_U05_mrr1:0.0563209194,A_U05_anc_evol2:0.2687517118)100:0.0458380617)100:0.0524383411,(A_U05_anc_evol4:0.1575609707,A_U05_anc_evol3:0.0538115632)70:0.0240759768);
+
+TIME STAMP
+----------
+
+Date and time: Tue Feb  2 13:38:16 2021
+Total CPU time used: 0.35933 seconds (0h:0m:0s)
+Total wall-clock time used: 0.3030099869 seconds (0h:0m:0s)
+
