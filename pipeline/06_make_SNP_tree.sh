@@ -36,7 +36,23 @@ print_fas() {
   printf ">%s\n%s\n" $1 $(bcftools view -e 'AF=1' $2 | bcftools query -e 'INFO/AF < 0.1' -s $1 -f '[%TGT]')
 }
 
-export -f print_fas
+iqtreerun() {
+	in=$1
+	out=$in.treefile
+	if [[ ! -f $out || $in -nt $out ]]; then
+		iqtree2 -m GTR+ASC -s $in -nt AUTO -b 100
+	fi
+}
+
+fasttreerun() {
+        in=$1
+	out=$(echo $in | perl -p -e 's/\.mfa/.fasttree.tre/')
+        if [[ ! -f $out || $in -nt $out ]]; then
+                FastTreeMP -gtr -gamma -nt < $in > $out
+        fi
+}
+
+export -f print_fas fasttreerun iqtreerun
 mkdir -p $TREEDIR
 for POPNAME in $(yq eval '.Populations | keys' $POPYAML | perl -p -e 's/^\s*\-\s*//')
 do
@@ -59,5 +75,6 @@ do
     fi
   done
 done
-parallel -j 2 FastTreeMP -gtr -gamma -nt {} \> {.}.fasttree.tre ::: $(ls $TREEDIR/*.mfa)
-parallel -j 4 iqtree2 -m GTR+ASC -s {} -nt AUTO -b 100 ::: $(ls $TREEDIR/*.mfa)
+
+parallel -j 2 fasttreerun ::: $(ls $TREEDIR/*.mfa)
+parallel -j 4 iqtreerun ::: $(ls $TREEDIR/*.mfa)
