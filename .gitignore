@@ -10,3 +10,4 @@ logs/*
 *.ann
 *.amb
 *.pac
+.Rproj.user
