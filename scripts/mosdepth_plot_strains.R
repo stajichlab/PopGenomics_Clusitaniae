@@ -2,6 +2,7 @@ library(ggplot2)
 library(RColorBrewer)
 library(tidyverse)
 library(stringr)
+library(dplyr)
 colors1 <- colorRampPalette(brewer.pal(8, "RdYlBu"))
 manualColors = c("dodgerblue2", "red1", "grey20")
 
@@ -11,8 +12,11 @@ mosdepthdir = "coverage/mosdepth"
 chrlist = 1:8
 windows = c(5000, 10000)
 
-#scale_colour_brewer(palette = "Set3") +
-
+keydiversitystrains = tibble(infiles=c("ATCC_42720","CBS_6936", "AR_0398",
+                                       "UCDFST_16-4994.55","UCDFST_61-4","UCDFST_71-129",
+                                       "UCDFST_76-31","UCDFST_79-1","UCDFST_80-11",
+                                       "UCDFST_80-12","UCDFST_82-606.2","CL_1A","A_L17",
+                                       "C_L01","B_L01","FDAARGOS_655","DSG_P1","N2_070_000G1"))
 plot_strain <- function(strain, data) {
 	l = subset(data, data$Strain == strain)
 	Title = sprintf("Chr coverage plot for %s", strain)
@@ -39,12 +43,14 @@ plot_chrs <- function(chrom, data) {
 	#guides(fill = guide_legend(keywidth = 3,keyheight = 1))
 }
 
+Prefix = "Supercontig_1."
+
 for (window in windows) {
   inpattern = sprintf(".%sbp.regions.bed.gz$", window)
   file_list <- list.files(path = mosdepthdir, pattern = inpattern)
   bedwindows <- data.frame()
   for (i in 1:length(file_list)) {
-    infile = sprintf("%s/%s", mosdepthdir, file_list[i])
+    infile = sprintf("%s/%s", mosdepthdir, final$infiles[i])
     strain = str_replace(file_list[i], inpattern, "")
     # fix me here?
     t = read.table(infile, header = F)
@@ -119,5 +125,5 @@ for (window in windows) {
 		pdffile=sprintf("plots/StrainPlot_%dkb.%s.pdf", window/1000,strains[[i]])
   	ggsave(plot = plts[[i]], file = pdffile)
 	}
-
 }
+
