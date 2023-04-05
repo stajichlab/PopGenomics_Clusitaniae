@@ -1,6 +1,9 @@
 # C. lusitaniae PopGenomics
+Population genomic analysis of Clavispora lusitaniae isolates from CF patients and Environmental sources.
 
-This was built from https://github.com/stajichlab/PopGenomics_template
+The pipeline uses GATK to call variants and has steps for CNV detection, running functional implications of the variants with snpEff, and construction of a tree from the SNP data.
+
+This repository was derived from https://github.com/stajichlab/PopGenomics_template
 
 Some additional customization applied to reflect the multiple sub-sets of the dataset we are exploring.
 
