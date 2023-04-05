@@ -1,14 +1,28 @@
-# C. lusitaniae PopGenomics
-Population genomic analysis of Clavispora lusitaniae isolates from CF patients and Environmental sources.
+# C. lusitaniae Population Genomics
 
-The pipeline uses GATK to call variants and has steps for CNV detection, running functional implications of the variants with snpEff, and construction of a tree from the SNP data.
+Population genomic analysis of Clavispora lusitaniae isolates from CF
+patients and Environmental sources.
+
+The pipeline uses GATK to call variants and has steps for CNV
+detection, running functional implications of the variants with
+snpEff, and construction of a tree from the SNP data.
+
+This release is a freeze of dataset and analysis scripts to explore
+variation in genomes of strains from CF patients, environmental set,
+and public SRA strain sets. The population genomic pipeline for
+genotyping Clavispora (Candida) lusitaniae populations. The pipelines
+for generating SNP and INDEL genotypes in VCF format along with CNV
+visualization, capturing unmapped reads to look for novel haplotypes,
+generate strain phylogenetic trees, and compare SNP and INDEL impacts
+on predicted genes to prioritize functional mutations. The analyses
+also examine Pooled strain collection to estimate allele frequencies
+within a population.
 
 This repository was derived from https://github.com/stajichlab/PopGenomics_template
 
 Some additional customization applied to reflect the multiple sub-sets of the dataset we are exploring.
 
 To do this several populations are defined in population_sets.yaml
-
 
 # PopGenomics template
 Template for Population Genomics variant calling in simple BASH + Slurm environment. Best use is to fork this as a template.
