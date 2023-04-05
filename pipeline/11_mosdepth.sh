@@ -17,5 +17,6 @@ do
 done
 
 mkdir -p plots
-Rscript scripts/plot_mosdepth_CNV.R
+Rscript scripts/plot_heatmap_mosdpth.R
+Rscript scripts/mosdepth_plot_strains.R
 

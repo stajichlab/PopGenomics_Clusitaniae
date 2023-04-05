@@ -115,7 +115,7 @@ for (window in windows) {
 	#ggsave(pdffile, device = "pdf",width=12)
 	strains = unique(d$Strain)
 	for(i in 1:length(unique(d$Strain) ) ) {
-		pdffile=sprintf("plots/StrainPlot_%dkb.%s.pdf", window/1000,strains[[i]])
+		pdffile=sprintf("plots/CNV/StrainPlot_%dkb.%s.pdf", window/1000,strains[[i]])
   	ggsave(plot = plts[[i]], file = pdffile)
 	}
 
